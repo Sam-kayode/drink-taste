@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Grayscale - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="#page-top"
+            ><img src="./assets/img/logo.png" alt="" style="max-width: 100px"
+          /></a>
+          <button
+            class="navbar-toggler navbar-toggler-right"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Masthead-->
+      <header class="masthead">
+        <div
+          class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center"
+        >
+          <div class="d-flex justify-content-center">
+            <div class="text-center">
+              <img
+                src="./assets/img/logo.png"
+                alt=""
+                style="max-width: 350px"
+              />
+              <h2 class="text-white-50 mx-auto mt-2 mb-5">
+                Drinks & Taste is one of the fast growing bartending company, we
+                make your event stress free with our topnotch drinks services in
+                Lagos and Nigeria as a whole.
+              </h2>
+              <a class="btn btn-primary" href="#contact">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- About-->
+      <section class="about-section text-center" id="about">
+        <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="text-white mb-4">Experience the Taste</h2>
+              <p class="text-white-50 mb-4">
+                We are exceptional in what we do, we procure, manage and serve
+                your event drinks in the most professional manner and approach.
+                Qualified and Experienced Drinks Bartenders. When you are
+                thinking of planning an Event, The Experienced specialist at
+                drink & taste is ready to assist you manage the drink services.
+                Servicing Any Form of Event within the defined budget set by our
+                clients. Drink and Taste Objectives are to make drink management
+                Services seamless to its customers. We help Draw up an Event
+                Cost Analysis for Prospective and our old Customers.
+              </p>
+              <p class="text-white-50">
+                Booking us for your event is the best way to have a memorable
+                Event, you relax while we do all the drinks services stress. Our
+                office is in Lagos, and we are Mobile for any kind of events
+                across the country and beyond. We save you from time wasting,
+                and help you avoid stress at your events. Contact us today to
+                get a professional drink services. You can book us online from
+                the convenience of your home/office to enjoy best drinks
+                services in Nigeria.
+              </p>
+            </div>
+          </div>
+          <!-- <img class="img-fluid" src="assets/img/pic1.png" alt="..." /> -->
+        </div>
+      </section>
+      <!-- Projects-->
+      <section class="projects-section bg-light" id="products">
+        <div class="container px-4 px-lg-5">
+          <!-- Featured Project Row-->
+
+          <div class="row justify-content-center">
+            <h2 class="text-center">Wine Rack</h2>
+
+            <div
+              id="carouselExampleControls"
+              class="carousel slide col-md-9"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="/assets/img/pic1.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" v-for="image in images">
+                  <img :src="image" class="d-block w-100" alt="..." />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects-section bg-light" id="services">
+        <div class="container px-4 px-lg-5">
+          <h2 class="text-center">Services</h2>
+          <!-- Services Two Row-->
+          <div
+            class="row gx-0 justify-content-center mb-5 service"
+            v-for="(service,i) in services"
+          >
+            <div class="col-lg-6 image">
+              <img
+                class="img-fluid"
+                src="assets/img/demo-image-02.jpg"
+                alt="..."
+              />
+            </div>
+            <div class="col-lg-6 content">
+              <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                  <div
+                    class="project-text w-100 my-auto text-center text-lg-right"
+                  >
+                    <h4 class="text-white">{{service.title}}</h4>
+                    <p class="mb-0 text-white-50">{{service.description}}</p>
+                    <hr class="d-none d-lg-block mb-0 me-0" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact-->
+      <section class="contact-section bg-black" id="contact">
+        <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <div class="card py-4 h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                  <h4 class="text-uppercase m-0">Address</h4>
+                  <hr class="my-4 mx-auto" />
+                  <div class="small text-black-50">
+                    4923 Market Street, Orlando FL
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <div class="card py-4 h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-envelope text-primary mb-2"></i>
+                  <h4 class="text-uppercase m-0">Email</h4>
+                  <hr class="my-4 mx-auto" />
+                  <div class="small text-black-50">
+                    <a href="#!">hello@yourdomain.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <div class="card py-4 h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                  <h4 class="text-uppercase m-0">Phone</h4>
+                  <hr class="my-4 mx-auto" />
+                  <div class="small text-black-50">+1 (555) 902-8832</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social d-flex justify-content-center">
+            <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </section>
+      <!-- Footer-->
+      <footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">
+          Copyright &copy; Drink and Taste 2023
+        </div>
+      </footer>
+      <!-- Bootstrap core JS-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Core theme JS-->
+      <script src="js/scripts.js"></script>
+      <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </div>
+  </body>
+</html>
